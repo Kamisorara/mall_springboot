@@ -35,7 +35,7 @@ class TokenDemoApplicationTests {
     @Test
     void PasswordEncoder() {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        String encode = bCryptPasswordEncoder.encode("xxx");
+        String encode = bCryptPasswordEncoder.encode("123123");
         System.out.println(encode);
     }
 
