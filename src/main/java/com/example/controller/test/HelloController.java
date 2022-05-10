@@ -1,6 +1,6 @@
 package com.example.controller.test;
 
-import org.springframework.security.access.prepost.PreAuthorize;
+import com.example.entity.resp.ResponseResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
 //    @PreAuthorize("hasAuthority('system:dept:list')")
-    public String helloController() {
-        return "hello";
+    public ResponseResult helloController() {
+        return new ResponseResult(200, "hello");
     }
 }
