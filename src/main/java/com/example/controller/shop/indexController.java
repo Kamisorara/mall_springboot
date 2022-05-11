@@ -2,6 +2,7 @@ package com.example.controller.shop;
 
 import com.example.entity.resp.ResponseResult;
 import com.example.service.ClassificationService;
+import com.example.service.NoticeBoardService;
 import com.example.service.RecommendedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,9 @@ public class indexController {
     @Autowired
     ClassificationService classificationService;
 
+    @Autowired
+    NoticeBoardService noticeBoardService;
+
     @RequestMapping(value = "/default-recommended", method = RequestMethod.GET)
     public ResponseResult getRecommended() {
         return recommendedService.selectAll();
@@ -28,5 +32,10 @@ public class indexController {
     @RequestMapping(value = "/classification", method = RequestMethod.GET)
     public ResponseResult getClassification() {
         return classificationService.selectAll();
+    }
+
+    @RequestMapping(value = "/notice-board", method = RequestMethod.GET)
+    public ResponseResult getNoticeBoard() {
+        return noticeBoardService.getAllNotice();
     }
 }

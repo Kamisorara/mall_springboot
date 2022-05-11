@@ -1,6 +1,6 @@
 package com.example.service.impl;
 
-import com.example.entity.Classification;
+import com.example.entity.shop.Classification;
 import com.example.entity.resp.ResponseResult;
 import com.example.mapper.ClassificationMapper;
 import com.example.service.ClassificationService;

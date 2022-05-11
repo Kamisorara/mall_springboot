@@ -3,7 +3,7 @@
 <mapper namespace="com.example.mapper.RecommendedMapper">
 
 
-    <select id="selectAll" resultType="com.example.entity.Recommended">
+    <select id="selectAll" resultType="com.example.entity.shop.Recommended">
         SELECT *
         FROM `shop_recommended`;
     </select>

@@ -1,6 +1,6 @@
 package com.example.service.impl;
 
-import com.example.entity.Recommended;
+import com.example.entity.shop.Recommended;
 import com.example.entity.resp.ResponseResult;
 import com.example.mapper.RecommendedMapper;
 import com.example.service.RecommendedService;

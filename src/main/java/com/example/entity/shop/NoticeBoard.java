@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.entity.shop;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -9,18 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "shop_recommended")
-public class Recommended {
+@TableName(value = "shop_noticeboard")
+public class NoticeBoard {
     @TableId
     private Long id;
 
-    private String shopName;
-
-    private String photoAddr;
-
-    private int price;
-
-    private int mark;
-
-    private int sell;
+    private String notice;
 }
