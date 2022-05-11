@@ -132,3 +132,6 @@ ADD COLUMN `sell` int NULL COMMENT '月销量' AFTER `mark`;
 ALTER TABLE `shop`.`shop_commodities`
 ADD COLUMN `mark` int NULL COMMENT '评论' AFTER `price`,
 ADD COLUMN `sell` int NULL COMMENT '月销量' AFTER `mark`;
+
+ALTER TABLE `shop`.`shop_classification`
+ADD COLUMN `icon` varchar(255) NULL COMMENT '商品图标element' AFTER `classification_name`;
