@@ -14,6 +14,7 @@ import java.util.UUID;
 /**
  * JWT工具类
  */
+
 public class JwtUtil {
 
     //有效期为
@@ -82,8 +83,11 @@ public class JwtUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjYWM2ZDVhZi1mNjVlLTQ0MDAtYjcxMi0zYWEwOGIyOTIwYjQiLCJzdWIiOiJzZyIsImlzcyI6InNnIiwiaWF0IjoxNjM4MTA2NzEyLCJleHAiOjE2MzgxMTAzMTJ9.JVsSbkP94wuczb4QryQbAke3ysBDIL5ou8fWsbt_ebg";
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZTI2YmRhOWNlMGI0MTQxOGIzMDA1YTVkNGQ2YjcwZSIsInN1YiI6IjMiLCJpc3MiOiJLYW1pc29yYSIsImlhdCI6MTY1MjMzNTU3MSwiZXhwIjoxNjUyOTQwMzcxfQ.OjQfcu8Cdyn3LCoxFuEhlgmJypn7mPaYlU4Ca2Jy2XU";
         Claims claims = parseJWT(token);
+        System.out.println(claims.get("iss"));
+        System.out.println(claims.get("sub"));
+        System.out.println(claims.getIssuer());
         System.out.println(claims);
     }
 

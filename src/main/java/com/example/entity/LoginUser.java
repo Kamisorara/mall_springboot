@@ -37,8 +37,7 @@ public class LoginUser implements UserDetails {
         }
         //把permissions中字符串类型的权限信息转换成GrantedAuthority对象存入authorities中
         authorities = new ArrayList<>();
-        for (String permission :
-                permissions) {
+        for (String permission : permissions) {
 
             SimpleGrantedAuthority authority = new SimpleGrantedAuthority(permission);
             authorities.add(authority);

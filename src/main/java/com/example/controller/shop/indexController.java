@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class indexController {
     @Autowired
     RecommendedService recommendedService;
+
     @Autowired
     ClassificationService classificationService;
 
